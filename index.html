@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="icon" href="path/to/favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+  
+
+<body>
+  <div class="navbar">
+    <div class="navbar-overlay" onclick="toggleMenuOpen()" aria-hidden="true"></div>
+
+    <button type="button" class="navbar-burger" onclick="toggleMenuOpen()" aria-label="Toggle Navigation Menu">
+      <span class="material-icons">sort</span>
+    </button>
+    <h1 class="navbar-title">Lyf_Is_Human</h1>
+    <div class="navbar-menu">
+      <button type="button" onclick="window.open('https://www.imdb.com/title/tt3042408/', '_blank')" class="active">Who am I?</button>
+      <button type="button" onclick="window.open('https://www.borngroup.com/', '_blank')" >Born</button>
+      <button type="button" onclick="window.open('https://en.wikipedia.org/wiki/Connect_(2022_film)')">Connect</button>
+      <button type="button" onclick="window.open('https://www.facebook.com/profile.php?id=100089756880165', '_blank')">Lyf</button>
+    </div>
+  </div>
+  <div class="dontclickonlinks">
+    <h1>clicked Links?</h1>
+  </div>
+  <script >
+    const toggleMenuOpen = () => document.body.classList.toggle("open");
+  </script>
+</body>
+</html>    

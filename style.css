@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Signika Negative', sans-serif;
+}
+
+body {
+  background: #87CBB9;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background: #0B2447;
+  color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.navbar-overlay {
+position: fixed;
+z-index: 2;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #87CBB9;
+visibility: hidden;
+opacity: 0;
+transition: 0.3s;
+}
+
+body.open .navbar-overlay {
+visibility: visible;
+opacity: 1;
+}
+
+.navbar-burger  {
+position: absolute;
+top: 0;
+left: 0;
+width: 64px;
+height: 64px;
+padding: 0;
+}
+
+.navbar-burger span   {
+color: white;
+}
+
+.navbar-title {
+margin: 0;
+font-size: 20px;
+}
+
+.navbar-menu {
+position: fixed;
+z-index: 3;
+top: 0;
+left: 0;
+translate: -100% 0;
+width: 270px;
+height: 100%;
+padding: 20px;
+display: flex;
+gap: 8px;
+flex-direction: column;
+align-items: flex-start;
+background: #0B2447;
+visibility: hidden;
+transition: translate 0.3s;
+}
+
+body.open .navbar-menu {
+translate: 0 0;
+visibility: visible;
+}
+
+.navbar-menu > button {
+color: rgba(255, 255, 255, 0.5);
+background: transparent;
+padding: 0 8px;
+}
+
+.navbar-menu > button.active {
+color: inherit;
+}
+
+.dontclickonlinks{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ background: #e2e9e750;
+  padding: 20px;
+  transform: translate(-50% , -50%);
+  font-size: .9rem;
+  color: #0B2447;
+  font-family: monospace;
+  border-radius: 50px;
+}
+@media only screen and (min-width: 600px) {
+.navbar-menu {
+  position: static;
+  translate: 0 0;
+  width: auto;
+  background: transparent;
+  flex-direction: row;
+  visibility: visible;
+}
+
+.navbar-burger_2,.navbar-burger {
+  display: none;
+}
+
+.navbar-overlay {
+  display: none;
+}
+
+.navbar {
+  justify-content: space-between;
+  padding: 0 0 0 16px;
+}
+}
